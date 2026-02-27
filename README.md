@@ -67,7 +67,7 @@ The service follows these rules:
 5. **Deduplication**
    - Emails and phone numbers are deduplicated in the response.
 
-   ## API Specification
+## API Specification
 
 ### Endpoint
 
