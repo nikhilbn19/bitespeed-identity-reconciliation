@@ -74,11 +74,7 @@ The service follows these rules:
 POST /identify
 
 ### Request Body (JSON)
-
-{
-  "email": "string (optional)",
-  "phoneNumber": "string (optional)"
-}
+![Request body](https://github.com/user-attachments/assets/c026325f-68aa-4c26-a575-99f09f5340a4)
 
 At least one of `email` or `phoneNumber` must be provided.
 
@@ -86,22 +82,14 @@ At least one of `email` or `phoneNumber` must be provided.
 
 ### Success Response (200)
 
-{
-  "contact": {
-    "primaryContactId": number,
-    "emails": string[],
-    "phoneNumbers": string[],
-    "secondaryContactIds": number[]
-  }
-}
+![API Response](https://github.com/user-attachments/assets/030b66ed-5a47-44a5-bac7-c77543c03b2f)
 
 ---
 
 ###  Error Response (400)
 
-{
-  "error": "Either email or phoneNumber must be provided"
-}
+![Error Response](https://github.com/user-attachments/assets/fa2e7139-c561-4d15-afc9-c900e1297f61)
+
 
 ## Edge Cases Handled
 
