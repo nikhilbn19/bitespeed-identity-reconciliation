@@ -60,9 +60,9 @@ The service follows these rules:
 
 4. **Primary Merge Handling**
    - If two independent primary contacts become connected through a request:
-     - The **oldest contact remains primary**.
-     - The newer primary is converted into a secondary.
-     - Its `linkedId` is updated to reference the oldest primary.
+   - The **oldest contact remains primary**.
+   - The newer primary is converted into a secondary.
+   - Its `linkedId` is updated to reference the oldest primary.
 
 5. **Deduplication**
    - Emails and phone numbers are deduplicated in the response.
@@ -95,82 +95,82 @@ At least one of `email` or `phoneNumber` must be provided.
 
 The service correctly handles the following scenarios:
 
-- Lookup using only email
-- Lookup using only phoneNumber
-- Creation of secondary contact when new information appears
-- Prevention of duplicate contacts
-- Merging of two primary contacts
-- Preservation of the oldest contact as primary
-- Deduplication of emails and phone numbers in the response
-- Validation when both email and phoneNumber are missing
+   - Lookup using only email
+   - Lookup using only phoneNumber
+   - Creation of secondary contact when new information appears
+   - Prevention of duplicate contacts
+   - Merging of two primary contacts
+   - Preservation of the oldest contact as primary
+   - Deduplication of emails and phone numbers in the response
+   - Validation when both email and phoneNumber are missing
 
 ## Running Locally
 
 ### 1️ Clone the repository
 
-git clone <your-repo-url>
-cd bitespeed-identity-reconciliation
+   git clone <your-repo-url>
+   cd bitespeed-identity-reconciliation
 
 ---
 
 ### 2️ Install dependencies
 
-npm install
+   npm install
 
 ---
 
 ### 3️ Configure environment variables
 
-Create a `.env` file in the root directory:
+   Create a `.env` file in the root directory:
 
-DATABASE_URL="postgresql://username:password@localhost:5432/bitespeed"
-PORT=3000
+   DATABASE_URL="postgresql://username:password@localhost:5432/bitespeed"
+   PORT=3000
 
 ---
 
 ### 4️ Run database migrations
 
-npx prisma migrate dev
+   npx prisma migrate dev
 
 ---
 
 ### 5️ Start development server
 
-npm run dev
+   npm run dev
 
-Server will run at:
+   Server will run at:
 
-http://localhost:3000
+   http://localhost:3000
 
 ##  Production Build
 
 To build and run the project in production mode:
 
-npm run build
-npm start
+   npm run build
+   npm start
 
 ---
 
 ##  Hosted Endpoint
 
-After deployment, the live API endpoint will be available at:
+   After deployment, the live API endpoint will be available at:
 
-https://bitespeed-api-x9yx.onrender.com/identify
+   https://bitespeed-api-x9yx.onrender.com/identify
 
 ---
 
 ##  Evaluation Checklist
 
-- SQL database used (PostgreSQL)
-- Node.js + TypeScript implementation
-- Prisma ORM with self-referencing relation
-- `/identify` endpoint implemented
-- Primary contact creation
-- Secondary contact creation
-- Primary-to-primary merge handling
-- Oldest primary preservation rule
-- JSON request body only
-- Publicly hosted endpoint
+   - SQL database used (PostgreSQL)
+   - Node.js + TypeScript implementation
+   - Prisma ORM with self-referencing relation
+   - `/identify` endpoint implemented
+   - Primary contact creation
+   - Secondary contact creation
+   - Primary-to-primary merge handling
+   - Oldest primary preservation rule
+   - JSON request body only
+   - Publicly hosted endpoint
 
 ---
 
