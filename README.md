@@ -108,54 +108,56 @@ The service correctly handles the following scenarios:
 
 ### 1️ Clone the repository
 
-   git clone <your-repo-url>
-   cd bitespeed-identity-reconciliation
+      git clone <your-repo-url>
+      
+      cd bitespeed-identity-reconciliation
 
 ---
 
 ### 2️ Install dependencies
 
-   npm install
+      npm install
 
 ---
 
 ### 3️ Configure environment variables
 
-   Create a `.env` file in the root directory:
+      Create a `.env` file in the root directory:
 
-   DATABASE_URL="postgresql://username:password@localhost:5432/bitespeed"
-   PORT=3000
+      DATABASE_URL="postgresql://username:password@localhost:5432/bitespeed"
+      PORT=3000
 
 ---
 
 ### 4️ Run database migrations
 
-   npx prisma migrate dev
+      npx prisma migrate dev
 
 ---
 
 ### 5️ Start development server
 
-   npm run dev
+      npm run dev
 
-   Server will run at:
+      Server will run at:
 
-   http://localhost:3000
+      http://localhost:3000
 
 ##  Production Build
 
 To build and run the project in production mode:
 
-   npm run build
-   npm start
+      npm run build
+   
+      npm start
 
 ---
 
 ##  Hosted Endpoint
 
-   After deployment, the live API endpoint will be available at:
+      After deployment, the live API endpoint will be available at:
 
-   https://bitespeed-api-x9yx.onrender.com/identify
+      https://bitespeed-api-x9yx.onrender.com/identify
 
 ---
 
